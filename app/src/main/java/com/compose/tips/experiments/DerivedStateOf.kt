@@ -1,4 +1,4 @@
-package com.compose.tips.components
+package com.compose.tips.experiments
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.material3.Button
@@ -9,7 +9,6 @@ import androidx.compose.runtime.derivedStateOf
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateListOf
-import androidx.compose.runtime.neverEqualPolicy
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import kotlinx.coroutines.delay

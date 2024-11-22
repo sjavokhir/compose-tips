@@ -1,4 +1,4 @@
-package com.compose.tips.components
+package com.compose.tips.experiments
 
 import android.util.Log
 import androidx.compose.foundation.layout.Column
@@ -11,6 +11,17 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 
+/**
+ * Recomposition scopes between Button and Switch
+ *
+ * The Compose material component Switch can trigger the recomposition of the entire scope of the
+ * Composable function, so it must be used judiciously. For instance, in the given example,
+ * clicking on the button does not recompose the MyList Composable.
+ *
+ * This occurs because the Composable lambda parameter of the Button captures the smallest necessary
+ * recomposition scope. However, any interaction with the Switch will cause a recomposition
+ * each time it is toggled.
+ */
 @Composable
 fun RecompositionScopesBetweenButtonAndSwitch() {
     Column {

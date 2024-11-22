@@ -1,4 +1,4 @@
-package com.compose.tips.components
+package com.compose.tips.experiments
 
 import androidx.compose.runtime.Composable
 
