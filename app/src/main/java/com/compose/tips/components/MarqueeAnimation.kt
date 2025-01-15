@@ -2,7 +2,9 @@ package com.compose.tips.components
 
 import androidx.compose.foundation.MarqueeSpacing
 import androidx.compose.foundation.basicMarquee
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.widthIn
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -18,6 +20,21 @@ import androidx.compose.ui.graphics.drawscope.ContentDrawScope
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+
+@Composable
+fun BasicMarqueeSample() {
+    // Marquee only animates when the content doesn't fit in the max width.
+    Column(Modifier.width(100.dp)) {
+        Text(
+            text = "hello world",
+            fontSize = 32.sp,
+            modifier = Modifier.basicMarquee(
+                iterations = Int.MAX_VALUE,
+                repeatDelayMillis = 900
+            )
+        )
+    }
+}
 
 @Composable
 fun BasicMarqueeWithFadedEdgesSample() {
